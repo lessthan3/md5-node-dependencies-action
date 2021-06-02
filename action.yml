@@ -1,0 +1,8 @@
+name: 'MD5 Node Dependencies'
+description: 'Creates MD5 hash of dependencies in package.json'
+outputs:
+  dependenciesMD5: # id of output
+    description: 'MD5 hash of dependencies'
+runs:
+  using: 'node12'
+  main: 'index.js'
