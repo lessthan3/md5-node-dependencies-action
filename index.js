@@ -14,12 +14,6 @@ try {
     console.log(contents);
     const packageJSON = JSON.parse(contents);
     const { dependencies } = packageJSON;
-    for (const dep in dependencies) {
-      if (dependencies[dep].startsWith('^')) {
-        core.setFailed(`Dependency verions must be specific: ${dep}:${dependencies[dep]}`);
-        return;
-      }
-    }
     const dependenciesStr = JSON.stringify(dependencies);
     const result = md5(dependenciesStr);
     console.log(`Dependencies MD5: ${result}`);
