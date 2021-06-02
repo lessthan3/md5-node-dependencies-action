@@ -23,7 +23,7 @@ try {
     const dependenciesStr = JSON.stringify(dependencies);
     const result = md5(dependenciesStr);
     console.log(`Dependencies MD5: ${result}`);
-    core.setOutput("dependenciesMD5", result);
+    core.setOutput("md5", result);
   });
 } catch (error) {
   core.setFailed(error.message);
